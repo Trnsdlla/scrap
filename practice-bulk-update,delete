@@ -1,0 +1,100 @@
+const jacket = {
+    id: 1, 
+    size: "Large",
+    color: "Dark Brown",
+    style: "Bomber",
+    price: 250
+}
+    
+
+
+const dressPants = {
+    id: 2,
+    size: "Medium",
+    color: "Black",
+    style: "Silk main fabric",
+    price: 500
+}
+
+
+const underwear = {
+    id: 3,
+    size: "Small",
+    color: "Blue",
+    style: "Champion Boxer Briefs",
+    price: 20
+}
+
+const inStock = [       // array
+    jacket,
+    dressPants,
+    underwear
+]
+
+
+const updatedUnderwear = {
+    id: 3,
+    size: "XXXtra Large",
+    color: "Yellow Stained White",
+    style: "Fruit of the Loom",
+    price: "Trash"
+}
+const updatedDressPants = {
+id: 2,
+size: "McGregor",
+color: "Green",
+style: "Satin Leprechauns",
+price: 500
+}
+const updatedJacket = {
+    id: 1,
+    size: "Impossibly Small",
+    color: "Not part of the visible light spectrum",
+    style: "Alien",
+    price: "3-hit DMT dose"
+}
+const updatedStocks = [
+    updatedJacket,
+    updatedDressPants,
+    updatedUnderwear
+]
+
+
+// console.log(addManyStock(updatedStocks))
+
+// const updateManyStock = (stock) => {
+//     for (let i = 0; i < stock.length; i++) {
+//         const currentStock = inStock[i]
+
+//         if (currentStock.id === stock.id) {
+//             inStock[i] = stock
+//         }
+//     }
+
+//     return {
+//         message: 'successfully updated!',
+//         updatedID: stock.id
+//     }
+// }
+
+// console.log(updateManyStock(updatedStocks))
+
+const updateManyStock = (stock) => {
+    for (i = 0; i < inStock.length; i++) {
+        const currentStock = inStock[i]
+        for (j = 0; j < stock.length; j++) {
+
+            if ( newStock.id === currentStock.id) {
+                inStock[i] = stock
+            }
+        }
+    }
+    return {
+        message: "successfully updated",
+        updatedID: stock.id,
+    }
+}
+
+console.log(updateManyStock(updatedStocks))
+
+// no fucking clue
